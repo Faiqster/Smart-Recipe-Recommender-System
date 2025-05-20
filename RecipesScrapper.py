@@ -5,7 +5,6 @@ import json
 def get_recipe(url):
     headers = {'User-Agent': 'Mozilla/5.0'}
     response = requests.get(url, headers=headers)
-    print(response)
     soup = BeautifulSoup(response.content, 'lxml')
 
     recipe = {}
